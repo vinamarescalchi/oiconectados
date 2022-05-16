@@ -1,0 +1,9 @@
+Após realizar toda a montagem iremos utilizar a plataforma https://ubidots.com/ para que os
+resultados vá automaticamente para a cloud, e apareça na tela do computador. Como a ubidots
+oferece uma plataforma simples e de manuseio intuitivo, já subindo pra cloud para isso iremos
+preparar a plataforma Arduino para que tenha conexão MQTT e assim levar os resultados para a
+nuvem (ubidots).
+
+Preparar a IDE Arduino para programar o NodeMCU, utilizando o programa LUA para programar
+o módulo, após isso, será baixado e instalado a biblioteca pubsubclient no Arduino. Feito isso,
+escolheremos um broker MQTT para utilizar. Que será usado o https://iot.eclipse.org/
