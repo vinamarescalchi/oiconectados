@@ -1,0 +1,6 @@
+A ferramenta desenvolvida deverá ser utilizada para medir o batimento cardiaco.
+
+A ferramenta possui 3 eletrodos que devem ser posicionados nos pontos de maior transição sanguinea do corpo para que possa ser aferida a frequencia do batimento cardiaco.
+
+Com os eletrodos corretamente posicionados, o código que esta rodando simultaneamente através da conexão com a web, recebe essas informações e trata elas de uma forma
+que apresente ao usuário final e tendo a vantagem de que não necessáriamente precisa estar no mesmo ambiente que a pessoa que esta tendo sua frequencia aferida.
