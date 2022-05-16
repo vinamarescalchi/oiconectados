@@ -1,0 +1,59 @@
+Materiais
+
+
+Arduino Uno R3 O Arduino Uno R3 é uma placa baseada no microcontrolador Tmega328
+(datasheet). Ele tem 14 pinos de entrada/saída digital (dos quais 6 podem ser usados como saídas
+PWM), 6 entradas analógicas, um cristal oscilador de 16MHz, uma conexão USB, uma entrada de
+alimentação uma conexão ICSP e um botão de reset. Ele contém todos os componentes necessários
+para suportar o microcontrolador, simplesmente conecte a um computador pela porta USB ou
+alimentar com uma fonte ou com uma bateria e tudo pronto para começar.
+
+A Placa Arduino Uno é a melhor placa para aprender e começar a criar seus projetos eletrônicos com
+programação. O Arduino Uno é uma placa robusta, utilizada mundialmente, conta com uma rica
+documentação complementar proveniente de Shields, Módulos e Sensores.
+
+Descrição da Placa Arduino Uno R3 O Arduino Uno R3 difere de todas as placas antecessoras no
+sentido de não utilizar o chip FTDI cara conversão do sinal serial.
+
+Utiliza no seu lugar um Atmega8U2 programado como conversor de USB para serial.
+
+
+Revisão 3 da placa com as novas características:
+
+Pinos SDA e SCL adicionados próximos ao AREF.
+Dois outros pinos adicionados próximos ao RESET, o IOREF que permite aos shields se adaptarem à
+voltagem fornecida pela placa. No futuro os shields serão compatíveis tanto com as placas que
+utilizam o AVR e operam a 5V, como com o ARduino Due que operará a 3,3V. O segundo pino não
+está conectado e é resrvado para propósitos futuros.
+
+Circuito de RESET mais robusto. Atmega 16U2 em substituição ao 8U2.
+
+"Uno" quer dizer um em italiano e é utilizado para marcar o lançamento do Arduino 1.0. O Uno e a
+versão 1.0 serão as versões de referência do Arduino, daqui para diante. O UNO é o mais recente de
+uma série de placas Arduino, e o modelo de referência para a plataforma Arduino.
+
+
+
+Sensor de ECG AD8232 (Pulso e Frequência Cardíaca)
+Modelo: AD8232
+
+Pulso e Frequência Cardíaca Tensão de operação: 3.3V Temperatura de operação: -40°C a +85°C
+Eletrodo 3 vias conector 3,5mm Comprimento do cabo: 50cm Fácil conexão com o microcontrolador
+Medição de atividade elétrica do coração ECG portátil LED indicador de pulsos e batimentos Saída
+Analógica;
+
+Material: Termoplásticos/Nylon/Metal Peso: 30g
+
+
+Protoboard
+protoboard é uma matriz de matriz de contato, ou placa de ensaio (em inglês breadboard) é uma
+placa com furos de furos de conexões condutoras para montagem de circuitos elétricos
+experimentais. Muito conhecida por sua facilidade de inserção de componentes uma vez que não
+necessita de soldagem.
+
+
+Cabos Jumpers
+Cabos Jumpers são peças indispensáveis na sua bancada de projetos. O uso destes cabos é ideal para
+efetuar as conexões entre componentes eletrônicos nos projetos, pois são pequenos fios condutores
+que podem ser conectados a uma protoboard para interligar dois pontos do circuito em projetos
+eletrônicos, geralmente utilizados em conexões com Arduino, Raspberry Pi, entre outros.
