@@ -1,6 +1,9 @@
-A ferramenta desenvolvida deverá ser utilizada para medir o batimento cardiaco.
+Em primeiro lugar, devem-se colocar os eletrodos na superfície da pele,
+conforme instrução abaixo, após isso ligar o microcontrolador a uma entrada usb,
+onde em seguida devera compilado na plataforma IDE Arduino, com o código abaixo. 
+Colocando o seu Wi-Fi, senha, login e usuário do ubidots para onde irão as informações do projeto para ser analisadas e interpretadas e guardadas na plataforma.
 
-A ferramenta possui 3 eletrodos que devem ser posicionados nos pontos de maior transição sanguinea do corpo para que possa ser aferida a frequencia do batimento cardiaco.
 
-Com os eletrodos corretamente posicionados, o código que esta rodando simultaneamente através da conexão com a web, recebe essas informações e trata elas de uma forma
-que apresente ao usuário final e tendo a vantagem de que não necessáriamente precisa estar no mesmo ambiente que a pessoa que esta tendo sua frequencia aferida.
+Para o ajuste dos eletrodos deve-se seguir a seguinte ordem: o eletrodo de referência (sinalizado pela cor preta) deve ser posicionado no lado direito na altuira do peito ou no ante braço,
+o eletrodo secundario (marcado em azul) é da lateral esquerda do corpo (braço esquerdo ou lateral esquerda do coração)
+e o ultimo (marcado em vermelho) é da lateral direita do corpo (perna direita ou lateral direita do coração). 
