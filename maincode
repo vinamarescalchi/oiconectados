@@ -1,29 +1,22 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
  
-#define WIFISSID "Alexahome" // Put your WifiSSID here
-#define PASSWORD "hngzhowxiantan" // Put your wifi password here
-#define TOKEN "BBFF-XHndJYqgYEyhrfhp3T3Rcy7RgirN9p" // Put your Ubidots' TOKEN
-#define MQTT_CLIENT_NAME "alexnewton" // MQTT client Name, please enter your own 8-12 alphanumeric character ASCII string; 
-                                           //it should be a random and unique ascii string and different from all other devices
+#define WIFISSID "ALLEMAO"      // Colocado o wifi da residencia da aluna Raquel Allemao
+#define PASSWORD "123456" // Colocado a senha do wi-fi da residencia (senha simulada)
+#define TOKEN "BBFF-XHndJYqgYEyhrfhp3T3Rcy7RgirN9p" // Colocado o TOKEN do ubidots 
+#define MQTT_CLIENT_NAME "raquelallemao"               // Nome do cliente MQTT;
+                                                  
+#define VARIABLE_LABEL "sensor" // Atribuido o rótulo da variável
+#define DEVICE_LABEL "esp32"    // Atribuido o rótulo do dispositivo
  
-/****************************************
- * Define Constants
- ****************************************/
-#define VARIABLE_LABEL "sensor" // Assing the variable label
-#define DEVICE_LABEL "esp32" // Assig the device label
- 
-#define SENSOR A0 // Set the A0 as SENSOR
+#define SENSOR A0 // A0 foi definido como sensor. ou seja os eletrodos.
  
 char mqttBroker[]  = "industrial.api.ubidots.com";
 char payload[100];
 char topic[150];
-// Space to store values to send
+// Espaço para armazenar valores para enviar
 char str_sensor[10];
- 
-/****************************************
- * Auxiliar Functions
- ****************************************/
+
 WiFiClient ubidots;
 PubSubClient client(ubidots);
  
@@ -36,11 +29,11 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
  
 void reconnect() {
-  // Loop until we're reconnected
+  // Loop até estarmos reconectados
   while (!client.connected()) {
-    Serial.println("Attempting MQTT connection...");
+    Serial.println("Tentando conexão MQTT...");
     
-    // Attemp to connect
+    //Tentativa de conexão
     if (client.connect(MQTT_CLIENT_NAME, TOKEN, "")) {
       Serial.println("Connected");
     } else {
@@ -53,17 +46,14 @@ void reconnect() {
   }
 }
  
-/****************************************
- * Main Functions
- ****************************************/
 void setup() {
   Serial.begin(115200);
   WiFi.begin(WIFISSID, PASSWORD);
-  // Assign the pin as INPUT 
+  // Atribua o pino como INPUT
   pinMode(SENSOR, INPUT);
  
   Serial.println();
-  Serial.print("Waiting for WiFi...");
+  Serial.print("Esperando por WiFi ...");
   
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
@@ -71,8 +61,8 @@ void setup() {
   }
   
   Serial.println("");
-  Serial.println("WiFi Connected");
-  Serial.println("IP address: ");
+  Serial.println("WiFi conectado");
+  Serial.println("Endereço de IP:");
   Serial.println(WiFi.localIP());
   client.setServer(mqttBroker, 1883);
   client.setCallback(callback);  
@@ -85,15 +75,15 @@ void loop() {
  
   sprintf(topic, "%s%s", "/v1.6/devices/", DEVICE_LABEL);
   sprintf(payload, "%s", ""); // Cleans the payload
-  sprintf(payload, "{\"%s\":", VARIABLE_LABEL); // Adds the variable label
+  sprintf(payload, "{\"%s\":", VARIABLE_LABEL); // Adiciona o rótulo da variável
   
   float sensor = analogRead(SENSOR); 
   
-  /* 4 is mininum width, 2 is precision; float value is copied onto str_sensor*/
+  /4 é a largura mínima, 2 é a precisão; valor flutuante é copiado para str_sensor/
   dtostrf(sensor, 4, 2, str_sensor);
   
   sprintf(payload, "%s {\"value\": %s}}", payload, str_sensor); // Adds the value
-  Serial.println("Publishing data to Ubidots Cloud");
+  Serial.println("Publicação de dados na nuvem Ubidots");
   client.publish(topic, payload);
   client.loop();
   delay(500);
