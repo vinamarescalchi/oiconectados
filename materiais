@@ -1,22 +1,14 @@
 Materiais
 
 
-Arduino Uno R3 O Arduino Uno R3 é uma placa baseada no microcontrolador Tmega328
-(datasheet). Ele tem 14 pinos de entrada/saída digital (dos quais 6 podem ser usados como saídas
-PWM), 6 entradas analógicas, um cristal oscilador de 16MHz, uma conexão USB, uma entrada de
-alimentação uma conexão ICSP e um botão de reset. Ele contém todos os componentes necessários
-para suportar o microcontrolador, simplesmente conecte a um computador pela porta USB ou
-alimentar com uma fonte ou com uma bateria e tudo pronto para começar.
+Arduino Uno R3 O Arduino ESP 32 é uma placa é uma série de microcontroladores de baixo custo e baixo consumo de energia. 
+Também é um sistema-em-um-chip com microcontrolador integrado, Wi-Fi e Bluetooth. A série ESP32 emprega um microprocessador 
+Tensilica Xtensa LX6 com duas variações dual-core e single-core e inclui uma antena integrada RF tipo balun, amplificador de potência, 
+receptor de baixo ruído amplificado, filtros, gerenciamento de energia dos módulos.
 
-A Placa Arduino Uno é a melhor placa para aprender e começar a criar seus projetos eletrônicos com
-programação. O Arduino Uno é uma placa robusta, utilizada mundialmente, conta com uma rica
-documentação complementar proveniente de Shields, Módulos e Sensores.
-
-Descrição da Placa Arduino Uno R3 O Arduino Uno R3 difere de todas as placas antecessoras no
-sentido de não utilizar o chip FTDI cara conversão do sinal serial.
-
-Utiliza no seu lugar um Atmega8U2 programado como conversor de USB para serial.
-
+A Placa Arduino ESP32 é a melhor placa para aprender e começar a criar seus projetos eletrônicos com
+programação. O Arduino ESP 32 é uma placa robusta, utilizada mundialmente, conta com uma rica
+documentação.
 
 Revisão 3 da placa com as novas características:
 
